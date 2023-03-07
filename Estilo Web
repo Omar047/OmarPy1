@@ -1,0 +1,15 @@
+body{
+    background-image: url(https://img.freepik.com/vector-premium/fondo-futbol-o-futbol-pelota-grande-colores-azules_444390-4616.jpg);
+}
+h1{
+    color: rgb(253, 253, 253);
+}
+h2{
+    color: aqua;
+}
+h3{
+    color: rgb(255, 255, 255);
+}
+h4{
+    color: rgb(255, 255, 255);
+}
