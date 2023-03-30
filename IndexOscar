@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <title>Omar</title>
+</head>
+<link rel="stylesheet" href="Style.css">
+
+<body background="https://sm.ign.com/ign_latam/gallery/s/silent-hil/silent-hill-2-remake-trailer-screenshots_cr7j.jpg">
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-inverse navbar-stick-static-top">
+            <div class="container">
+                <a class="navbar-brand" href="Index.html">Inicio</a>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="Resumen.html">Resumen</a>
+                    </li>
+                    <li>
+                        <a href="Creditos.html">Creditos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <h1 align="center">Silent Hill</h1>
+    <h2 align="center">Por Omar</h2>
+    <p>.</p>
+    <img align="right" src="https://images.reporteindigo.com/wp-content/uploads/2022/05/LHXSGG3JWBDDJOEXKW4GMPSLOY.jpg" height="350px" width="600">
+    <h3 align="center" style="color: white;">Silent Hill ("letras japonesas" Sairento Hiru?, en espanol Colina Silenciosa) es un videojuego de terror publicado por
+        Konami y desarrollado por Team Silent, un grupo de Konami Computer Entertainment Tokyo. Fue lanzado para
+        PlayStation en Norteamerica en enero de 1999, y en Japon y Europa mas tarde ese mismo ano. Silent Hill emplea
+        una camara en tercera persona y entornos tridimensionales en tiempo real; los desarrolladores usaron niebla y
+        oscuridad para disfrazar las limitaciones del hardware. Asimismo, la obra presenta como protagonista a un
+        personaje sin cualidades o destreza fisica destacables, en contraste con titulos anteriores del genero</h3>
+    <p>.</p>
+</body>
+
+</html>
