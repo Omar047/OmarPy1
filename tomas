@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-9">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <title>Fisica</title>
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: aliceblue;">
+    
+    </nav>
+
+
+    <div class="jumbootron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4" style="color: blue;">Fisica 1</h1>
+            <p class="lead">Los elementos necesarios para facilitar el aprendizaje</p>
+
+            <form id="formulario">
+                <label for="distancia">Distancia</label>
+                <input type="text" id="distancia" name="distancia">
+                <select id="distanciaUnidad">
+                    <option value="metros">metros</option>
+                    <option value="pies">pies</option>
+                </select>
+                <br>
+                <label for="tiempo">Tiempo</label>
+                <input type="text" id="tiempo" name="tiempo">
+                <select id="TiempoUnidad">
+                    <option value="segundos">segundos</option>
+                    <option value="horas">horas</option>
+                </select>
+                <br>
+                <label for="velocidadUnidad">Unidades de velocidad</label>
+                <select id="velociadadUnidad">
+                    <option value="metros_por_segundo">m/s</option>
+                    <option value="pies_por_segundos">ft/s</option>
+                    <option value="kilometros_por_hora">km/h</option>
+                    <option value="millas_por_hora">mph</option>
+                </select>
+                <br>
+                <br>
+                <button type="button" value="Calcular" onclick="Calcular()" class="btn btn-succes">Calcular</button>
+                </form>
+                <br>
+                <p id="resultado"></p>
+                <p style="color: blue; background-color: bisque;">Velocidad<span id="velocidad"></span></p>
+                <p style="color: rgb(255, 0, 200); background-color: bisque;">Aceleracion<span id="aceleracion"></span></p>
+                <p style="color: blue; background-color: bisque;">Rapidez<span id="rapidez"></span></p>
+        </div>
+    </div>
+    <script>
+        function Calcular(){
+            //valores del formulario
+            const distancia = parseFloat(document.getElementById('distancia').value);
+            const tiempo = parseFloat(document.getElementById('tiempo').value);
+            const distanciaUnidad = parseFloat(document.getElementById('distanciaUnidad').value);
+            const TiempoUnidad = parseFloat(document.getElementById('tiempoUnidad').value);
+            const velociadadUnidad = parseFloat(document.getElementById('velocidadUnidad').value);
+
+            //Convertir unidada a SI
+            let distanciaSI = 0;
+            let tiempoSI = 0;
+
+            if(distanciaUnidad === 'metros'){
+                distanciaSI = distancia;
+            }
+            else if (distanciaUnidad === 'pies'){
+                distanciaSI = distancia /3.281;
+            }
+            if(TiempoUnidad === 'segundos'){
+                tiempoSI =tiempo;
+
+                console.log("El tiempoSI Else: " +tiempoSI);
+            }
+            else if (TiempoUnidad === 'horas'){
+                tiempoSI = tiempo * 3600;
+            }
+            console.log("La distanciaSI: " +distanciaSI);
+            console.log("El tiempoSI: " +tiempoSI);
+            //Calcular v.a.r
+            let velocidad = 0;
+            let aceleracion = 0;
+            let rapidez = 0;
+            if(velociadadUnidad === 'metros_por_segundo'){
+                velocidad = distanciaSI / tiempoSI;
+                rapidez = velocidad; //no es la formula
+                aceleracion = velocidad / tiempoSI;
+            }
+            else if(velociadadUnidad === 'pies_por_segundo'){
+                velocidad = (distanciaSI * 3.281) / tiempoSI; 
+                rapidez = velocidad; //no es la formula
+                aceleracion = velocidad / tiempoSI
+            }
+            else if(velociadadUnidad === 'kilometros_por_hora'){
+                velocidad = (distanciaSI / 1000) / (tiempoSI / 3600);
+                rapidez = velocidad; //no es la formula
+                aceleracion = velocidad / tiempoSI;
+            }
+            else if(velociadadUnidad === 'millas_por_hora'){
+                velocidad = (distancia /1609) / (tiempoSI / 3600);
+                rapidez = velocidad;
+                aceleracion = velocidad / tiempoSI;
+            }
+
+
+            //mostrar resultado
+            let resultado=''
+        }
+    </script>
+</body>
