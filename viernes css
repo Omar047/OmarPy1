@@ -1,0 +1,30 @@
+body{
+    background-color: #12EAEA;
+}
+header{
+    background-color: #BCE7FD;
+    padding: 25PX;
+}
+nav{
+    background-color: #DB2763;
+    padding: 10PX;
+}
+section{
+    background-color: #DB2763;
+}
+article{
+    background-color: #2B50AA;
+}
+aside{
+    background-color: #A846A0;
+    width: 30%;
+    float: right;
+}
+footer{
+    background-color: darkgoldenrod;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 90px;
+}
