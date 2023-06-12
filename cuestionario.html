@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>cuestionario</title>
+</head>
+
+<body>
+
+    <body style="background-color: #6a9ee2;">
+        <div style="margin: 24px;">
+            <nav class="navbar navbar-inverse navbar-stick-static-top">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index - copia.html">inicio</a>
+                        </li>
+                        <li>
+                            <a href="Menu - copia.html">menu</a>
+                        </li>
+                        <li>
+                        <li>
+                            <a href="Pedido - copia.html">pedido</a>
+                        </li>
+                        <li>
+                            <a href="Contacto - copia.html">contacto</a>
+                        </li>
+                        <li>
+                            <a href="calculadorafisica.html">Calculadora</a>
+                        </li>
+                        <li>
+                            <a href="apimovies.html">Movies</a>
+                        </li>
+                        <li class="active">
+                            <a href="cuestionario.html">Movies</a>
+                        </li>
+                    </ul>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="quiz-container" id="quiz">
+                <div class="quiz-header">
+                    <div class="images-container">
+                        <img src="https://i0.wp.com/www.lacasadeel.net/wp-content/uploads/2022/03/capitan-america-escudo-marvel.webp" alt="Imagen" id="question-imagen" style="width: 250px; height: auto;">
+                    </div>
+
+                    <h2 id="question">Quien le gana?</h2>
+                    <ul>
+                        <li>
+                            <input type="radio" name="answer" id="a" class="answer">
+                            <label for="a" id="a_text">Omar</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="answer" id="b" class="answer">
+                            <label for="b" id="a_text">Spiderman</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="answer" id="c" class="answer">
+                            <label for="c" id="a_text">Thor</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="answer" id="d" class="answer">
+                            <label for="d" id="a_text">venom</label>
+                        </li>
+                    </ul>
+                </div>
+                <button id="submit">Siguente</button>
+            </div>
+        </div>
+
+        <style>
+            body{
+                align-items: center;
+                justify-content: center;
+                overflow: 0;
+                margin: 0;
+            }
+            .quiz-container{
+                background-color: aliceblue;
+                background-image: linear-gradient(315deg, #b8c6db 0%, #615d92 100%);
+                border-radius: 10px;
+                box-shadow: 0 10px 20px 5px rgb(133, 37, 244);
+                width: 400px;
+                overflow: hidden;
+            }
+            .quiz.header{
+                padding: 15px;
+            }
+            h2{
+                padding: 15px;
+                text-align: center;
+                margin: 0;
+            }
+        </style>
+        <script>
+            const quizData = [
+                {
+                    question: "quien gana en una pelea de los siguentes personajes?",
+                    Image: "quiz1.jpg",
+                    a: "omar",
+                    b: "spiderman",
+                    c: "thor",
+                    d: "Venom",
+                    correct: "a"
+                },
+            ];
+
+            //obti
+            const quiz = document.getElementById('quiz');
+            const answerEls = document.querySelectorAll('.answer');
+            const questionEl = document.getElementById('question');
+            const submitBtn = document.getElementById('submit');
+            //dependiendo del numero de respuestas esto puede incrementar//
+            const a_text = document.getElementById('a_text');
+            const b_text = document.getElementById('b_text');
+            const c_text = document.getElementById('c_text');
+            const d_text = document.getElementById('d_text');
+
+            let currentQuiz = 0; //esta varable nos servira para realizar la siguente pregunta actual del cuestionario
+            let score = 0; //esta varible realiza el seguimiento del puntaje del usuario
+
+            loadQuiz();//va a cargar la primera pregunta del cuestionario
+            
+            function loadQuiz(){
+                deselectAnswer();
+                const currentQuizData = quizData[currentQuiz] //obtiene los datos de la pregunta actual
+                questionEl.innerText = currentQuizData.a; //muestra la opccion de la respuesta A en el elemento html
+                questionEl.innerText = currentQuizData.b; //muestra la opccion de la respuesta B en el elemento html
+                questionEl.innerText = currentQuizData.c; //muestra la opccion de la respuesta C en el elemento html
+                questionEl.innerText = currentQuizData.d; //muestra la opccion de la respuesta D en el elemento html  
+            }
+            function deselectAnswer(){
+                answerEl.forEach(answerEl => answerEl.checked = false); //desmarca a todas las casillas de verificacion de respuestas
+            }
+        </script><br><br>
+
+        <footer>
+            <center>
+                <footer>
+                    <center>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <h2>Contactame ahora</h2>
+                    <p>Si estas interesado en saber mas sobre las mejores peliculas que puedes ver,contactame a travez de cualquiera de las siguientes redes</p>
+                        <p>contactame</p>
+                        <p>abajo en la descripcion
+                        </p>
+                        <div class="contact-links">
+                            <a href="https://www.facebook.com/valeria.OmarZavaleta" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagramm.com/miperfil" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com/?lang=es.com/miperfil" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </center>
+            
+                    <script>
+                        const redessociales = document.querySelectorAll('.contact-links');
+                        redessociales.forEach(link => {
+                            link.addEventListener('click', e => {
+                                e.preventDefault();
+                                window.open(link.href, '_blank');
+                            });
+                        });
+                    </script>
+                </footer>
+
+            </body>
+            
+            </html>
