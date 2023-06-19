@@ -1,64 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <title>Jesus_Omar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="footer.css">
+  <title>Document</title>
 </head>
-<body>
-   <div style="margin: 24px;">
+
+<body style="background-color: cyan;">
+  <div style="margin: 24px;">
     <nav class="navbar navbar-inverse navbar-stick-static-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Inicio</a>
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="menu.html">Menu</a>
-                </li>
-                <li>
-                    <a href="pedido.html">Pedido</a>
-                </li>
-                <li>
-                <a href="contacto.html">contacto</a>
-                </li>
-            </ul>
-        </div>
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="index.html">inicio</a>
+            </li>
+            <li>
+            <a href="menu.html">menu</a>
+            </li>
+            <li>
+            <a href="pedido.html">pedido</a>
+            </li>
+            <li>
+            <a href="contacto.html">contacto</a>
+            </li>
+          <li>
+            <a href="Cuestionario.html">Cuestionario</a>
+          </li>
+          <li>
+            <a href="api-movies.html">Apimovies</a>
+          </li>
+          <li>
+            <a href="calculadora.html">Calculadora</a>
+          </li>
+          <li>
+            <a href="calculadora-de-fisica.html">Calculadora de Física</a>
+          </li>
+          <li>
+            <a href="perfil.html">Perfil</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-</div>
+</body>
+
 <style>
-    body{
-        background-color: black;
-        color: white;
-        font-family: 'ZootAllures', sans-serif;
-    }
-    div{
-        position: relative;
-    }
-    video{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .titulo{
-        background: black;
-        font-size: 150px;
-        text-align: center;
-        font-weight: 200;
-        mix-blend-mode: multiply;
-    }
+  body{
+      background-color: black;
+      color: #fff;
+      font-family: 'Thunderstrike', sans-serif;
+font-family: 'Thunderstrike 3D', sans-serif;
+font-family: 'Thunderstrike Gradient', sans-serif;
+font-family: 'Thunderstrike Halftone', sans-serif;
+font-family: 'Thunderstrike Laser', sans-serif;
+font-family: 'Thunderstrike Condensed', sans-serif;
+font-family: 'Thunderstrike Expanded', sans-serif;
+font-family: 'Thunderstrike Italic', sans-serif;
+  }
+  div{
+      position: relative;
+  }
+  video{
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .titulo{
+      background: black;
+      font-size: 150px;
+      text-align: center;
+      font-weight: 200;
+      mix-blend-mode: multiply;
+  }
+
 </style>
+
+
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <video autoplay muted preload loop>
-            <source src="https://youtu.be/_2BQ55bQ1WA" type="video/mp4">
-        </video>
-        <h1 class="titulo">BIENVENIDOS</h1>
-    </div>
+<div class="container">
+<video autoplay muted preload loop>
+  <source src="/img/goku.mp4" type="video/mp4">
+</video>
+<h1 class="titulo">BIENVENIDOS</h1>
+<p class="lead"></p></div>
 </div>
 
-</body>
-</html>
+<style>
+    footer{
+        background-color: rgb(19, 107, 167);
+        color: aliceblue;
+        padding: 30px 0;
+    }
+    .container{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .footer-content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-section{
+    width: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+    }
+    .about{
+    text-align: center;
+    }
+    .about h2{
+        margin-bottom: 20px;
+    }
+    .about p{
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    .contact-links{
+        display: flex;
+        justify-content: center;
+    }
+    .contact-links a{
+        display: inline-block;
+        color: bisque;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+    }
+    .contact-links a:hover{
+        transform: translateY(-5px);
+    }
+</style>
+<footer>
+    <center>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <h2>Contactame ahora</h2>
+            <p>Si estas interesado en saber mas sobre las mejores peliculas que puedes ver,contactame a travez de cualquiera de las siguientes redes</p>
+                <p>contactame</p>
+                <p>abajo en la descripcion
+                </p>
+                <div class="contact-links">
+                    <a href="https://www.facebook.com/OmarZavaleta" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagramm.com/miperfil" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/?lang=es.com/miperfil" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </center>
+    
+            <script>
+                const redessociales = document.querySelectorAll('.contact-links');
+                redessociales.forEach(link => {
+                    link.addEventListener('click', e => {
+                        e.preventDefault();
+                        window.open(link.href, '_blank');
+                    });
+                });
+            </script>
+        </footer>
+
+    </body>
+    
+    </html>
