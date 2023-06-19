@@ -1,52 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
-    <title>Omar</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/thunderstrike" rel="stylesheet">
+    <link rel="stylesheet" href="footers.css">
+    <title>Calculadora</title>
 </head>
+<body style="background-color: orangered;">
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-inverse navbar-stick-static-top">
+          <div class="container">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="index.html">inicio</a>
+                </li>
+                <li>
+                <a href="menu.html">menu</a>
+                </li>
+                <li>
+                <a href="pedido.html">pedido</a>
+                </li>
+                <li>
+                <a href="contacto.html">contacto</a>
+                </li>
+              <li>
+                <a href="Cuestionario.html">Cuestionario</a>
+              </li>
+              <li>
+                <a href="api-movies.html">Apimovies</a>
+              </li>
+              <li>
+                <a href="calculadora.html">Calculadora</a>
+              </li>
+              <li>
+                <a href="calculadora-de-fisica.html">Calculadora de Física</a>
+              </li>
+              <li>
+                <a href="perfil.html">Perfil</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-<body>
-    <div class="calc">
-        <input type="text" id="ans">
-            <div class="btn">
-                <input type="button" value='C' onclick="Clear('')">
-                <input type="button" value='%' onclick="solver('%')">
-                <input type="button" value='←' onclick="solver('←')">
-                <input type="button" value='/' onclick="solver('/')">
-                <br>
-                <input type="button" value='7' onclick="solver('7')">
-                <input type="button" value='8' onclick="solver('8')">
-                <input type="button" value='9' onclick="solover('9')">
-                <input type="button" value='x' onclick="solver('x')">
-                <br>
-                <input type="button" value='4' onclick="solver('4')">
-                <input type="button" value='5' onclick="solver('5')">
-                <input type="button" value='6' onclick="solver('6')">
-                <input type="button" value='=' onclick="solver('=')">
-                <br>
-                <input type="button" value='1' onclick="solver('1')">
-                <input type="button" value='2' onclick="solver('2')">
-                <input type="button" value='3' onclick="solver('3')">
-                <input type="button" value='+' onclick="solver('+')">
-                <br>
-                <input type="button" value='00' onclick="Clear('00')">
-                <input type="button" value='0' onclick="Clear('0')">
-                <input type="button" value='.' onclick="Clear('.')">
-                <input type="button" value='=' onclick="Clear('=')">
-                <br>
-            </div>
-                </div>
-                <script>
-                    const Solve = val =>{
-                        const v=document.getElementById('ans');
-                        v.value+=val;
-                    }
-                </script>
+    <div class="Calc">
+<input type="text" id="ans">
+    <div class="btn">
+<input type="button" value='C' onclick="Clear()">
+<input type="button" value='%' onclick="Solve('%')">
+<input type="button" value='←' onclick="Back('←')">
+<input type="button" value='/' onclick="Solve('/')">
+<br>
+<input type="button" value='7' onclick="Solve('7')">
+<input type="button" value='8' onclick="Solve('8')">
+<input type="button" value='9' onclick="Solve('9')">
+<input type="button" value='' onclick="Solve('')">
+<br>
+<input type="button" value='4' onclick="Solve('4')">
+<input type="button" value='5' onclick="Solve('5')">
+<input type="button" value='6' onclick="Solve('6')">
+<input type="button" value='-' onclick="Solve('-')">
+<br>
+<input type="button" value='3' onclick="Solve('3')">
+<input type="button" value='2' onclick="Solve('2')">
+<input type="button" value='1' onclick="Solve('1')">
+<input type="button" value='+' onclick="Solve('+')">
+<br>
+<input type="button" value='00' onclick="Solve('00')">
+<input type="button" value='0' onclick="Solve('0')">
+<input type="button" value='.' onclick="Solve('.')">
+<input type="button" value='=' onclick="Result()">
+<br>
+</div>
+    </div>
+    <script>
+        const Solve= val =>{
+            const v=document.getElementById('ans');
+             v.value+=val;  
+        }
+        function Result(){
+            var v1=document.getElementById('ans').value;
+            var v2=eval(v1);
+            document.getElementById('ans').value=v2; //esta es la que retorna el resultado.
+        }
+     const Clear = () =>{
+        const input=document.getElementById('ans');
+    input.value='';
+     } 
 
+     const Back = () => {
+    const back = document.getElementById('ans');
+    back.value=back.value.slice(0,-1);
+}
+    </script>
+    
 </body>
 
+<style>
+
+.Calc{
+    width: 30%;
+    height: 70%;
+    background-color: transparent;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+#ans{
+    width: 90%;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+color: rgba(255, 115, 0, 0.855);
+    align-content: center;
+    text-align: right;
+}
+.btn input[ type='button']{
+    width: 70px;
+    padding: 2px;
+    margin: 4px;
+    position: relative;
+    left: 23px;
+    top: 20px;
+    height: 55px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    background-color:transparent;
+    border-radius: 6px;
+}
+.btn input[type='button']:hover{
+    background-color: rgba(0, 255, 34, 0.929);
+    color: rgb(2, 0, 126);
+}
+</style>
+<style>
+    footer{
+        background-color: rgb(19, 107, 167);
+        color: aliceblue;
+        padding: 30px 0;
+    }
+    .container{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .footer-content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-section{
+    width: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+    }
+    .about{
+    text-align: center;
+    }
+    .about h2{
+        margin-bottom: 20px;
+    }
+    .about p{
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    .contact-links{
+        display: flex;
+        justify-content: center;
+    }
+    .contact-links a{
+        display: inline-block;
+        color: bisque;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+    }
+    .contact-links a:hover{
+        transform: translateY(-5px);
+    }
+</style>
+</center>
+
+<center>
+    <footer>
+        <div class="copyrigth">
+            <p>&copy;<span id="year">Derechos reservados.</span></p>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <h2>Contactame</h2>
+            <p>Si estas interesado en contactarme, puedes hacerlo a travez de cualquiera de las siguientes redes sociales.</p>
+            <p>Podras contactarme en cualquiera de estas apps:</p>
+            <p>Agregando solo un poco mas de informacion para que el texto se vea mucho mas ya que no se que mas agregarle...</p>
+            <div class="contact-links">
+            <a href="https://es-la.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://discord.com/" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    
+</center>
 </html>
